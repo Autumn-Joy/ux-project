@@ -1,0 +1,352 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  --h1: 2.5rem;
+  --h2: 1.875rem;
+  --h3: 1.25rem;
+
+  --padding-xxs: .15rem;
+  --padding-xs: .25rem;
+  --padding-sm: .5rem;
+  --padding-base: 1rem;
+  --padding-lg: 1.5rem;
+  --padding-xlg: 2rem;
+  --padding-xxl: 2.5rem;
+  --padding-xxxl: 5rem;
+
+  --margin-xsm: .15rem;
+  --margin-sm: .25rem;
+  --margin-base: 1rem;
+  --margin-lg: 1.5rem;
+  --margin-xl: 2rem;
+  --margin-xxl: 4rem;
+
+  /* buttons */
+  --btn-base: 1rem;
+  --border-radius-base: .5rem;
+  --border-radius-lg: 1rem;
+
+
+  --gap-base: 1rem;
+  --gap-lg: 1.5rem;
+  --gap-xl: 2rem;
+  --gap-xxl: 4rem;
+
+  --max-image-width: 5rem;
+
+  --hero-font-style: normal;
+
+  --header-font-size: 1.5rem;
+
+  --logo-max-width: 10rem;
+
+  font-size: 1rem;
+
+  /* color */
+  --pink: #DFB4C2;
+  --sand: #f6ece5;
+  --sand-light: #f1f0ef;
+  --tan: #E3CDBD;
+  --sky: #A2C9CE;
+  --sky-transparent: #b3ebf2b6;
+  --ocean: #3A818C;
+  --icon-color: #1e444a;
+
+  --sea-green: #7ec3b9c2;
+
+
+  --fontsize-bigger: 1.5rem;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button, .btn {
+  display: block;
+  width: 100%;
+  padding: var(--padding-base);
+}
+
+.btn {
+  background-color: var(--sky);
+  border: solid 4px var(--icon-color);
+  color: var(--icon-color);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: var(--border-radius-base);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  white-space: nowrap;
+  margin: var(--margin-base) 0;
+}
+
+.header-cta a {
+  background-color: var(--sand);
+  border: var(--tan) solid 4px;
+}
+
+.section-btn {
+  text-align: center;
+  background-color: var(--sand);
+  border: var(--tan) solid 4px;
+}
+
+header {
+  color: var(--sand);
+  font-size: var(--header-font-size);
+  background-image: url(assets/beach1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-image-container {
+  padding: var(--padding-xxl) var(--padding-base);
+
+}
+
+.logo {
+  margin: var(--margin-base);
+  max-width: var(--logo-max-width);
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-base);
+  text-align: center;
+  color: var(--icon-color);
+  background-color: var(--sky-transparent);
+  padding: var(--padding-sm);
+  border-radius: var(--border-radius-base);
+}
+
+.welcome-greeting {
+  display: none;
+}
+
+.menu-ul li {
+  list-style-type: none;
+  margin: var(--margin-base);
+}
+
+
+
+.info-section {
+  margin: var(--margin-base);
+  padding: var(--padding-base);
+  background-color: var(--sea-green);
+  border-radius: var(--border-radius-base);
+}
+
+.book-btn {
+  background-color: var(--sand-light);
+}
+
+.card {
+  border-radius: var(--border-radius-base);
+  background-color: var(--sand);
+  padding: var(--padding-sm);
+  margin: var(--margin-base) 0;
+}
+
+footer {
+  background-color: var(--sand);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-menu-column {
+  padding: var(--padding-base);
+}
+
+.footer-menu-column li {
+  list-style-type: none;
+}
+
+.cta {
+  padding: var(--padding-base);
+}
+
+/* tablet */
+/* @media (min-width: 768px) {
+
+} */
+
+/* desktop */
+@media (min-width: 1024px) {
+
+h2 {
+  font-size: var(--h2);
+}
+
+nav li:hover {
+  color: var(--sand);
+}
+
+.cta a {
+  transition: .2s ease-in;
+}
+
+.cta a:hover, a:hover {
+  background-color: var(--sea-green);
+  border: solid 4px var(--icon-color);
+  color: var(--sand);
+}
+
+.book2 .btn:hover, .book-btn {
+  background-color: var(--sky-transparent);
+}
+
+.welcome-greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-base) var(--padding-xxxl);
+  border-radius: var(--border-radius-base);
+  background-color: var(--sky-transparent);
+  margin: var(--margin-base);
+  color: var(--icon-color);
+
+}
+
+.welcome-greeting h1 {
+  size: var(--h1);
+  font-family: cursive;
+}
+
+.welcome-greeting h2 {
+  size: var(--h2);
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.align-right {
+  grid-column-start: 3;
+  display: flex;
+  justify-content: end;
+}
+.section-btn, .btn {
+  max-width: max-content;
+}
+
+.grid-2-column {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid-3-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--gap-xxl);
+}
+
+.grid-3-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--gap-xxl);
+}
+
+.card-image-container {
+  aspect-ratio: 4/3;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: var(--padding-xxxl) 0;
+}
+
+.footer-menu {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--gap-base);
+}
+
+.footer-menu-column li {
+  text-decoration: underline;
+  margin-top: var(--margin-base);
+  list-style-type: none;
+}
+
+.footer-menu-column li:hover {
+  text-decoration: .25rem var(--ocean) underline;
+  transform: scale(105%);
+  color: var(--ocean)
+}
+
+footer .cta {
+  display: flex;
+  justify-content: end;
+  margin-right: var(--margin-xl);
+}
+
+
+.book2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: fit-content;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.15);
+  gap: var(--gap-base);
+  border-radius: var(--border-radius-base);
+  padding: var(--padding-base);
+  margin: var(--margin-base);
+  background-color: var(--sand);
+  color: var(--icon-color);
+}
+
+.booking-section > * {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-base);
+}
+
+.book2 .btn {
+  background-color: var(--sea-green);
+  color: var(--ocean);
+}
+
+.book2 i {
+  color: var(--icon-color);
+}
+
+.booking-btn {
+  background-color: var(--sand);
+  color: var(--icon-color);
+}
+
+
+}

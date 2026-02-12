@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="alternateStyle.css">
   <title>Document</title>
   <script src="https://kit.fontawesome.com/de57005394.js" crossorigin="anonymous"></script>
 </head>
@@ -11,6 +11,10 @@
   <header>
       <div class="logo">
         <img src="assets/logo.svg" alt="">
+      </div>
+      <div class="welcome-greeting">
+        <h1>Visit Tanihi</h1>
+        <h2>Your exclusive getaway island</h2>
       </div>
       <nav>
         <ul class="menu-ul">
@@ -25,20 +29,22 @@
           </li>
         </ul>
       </nav>
-      <div class="cta">
+      <div class="header-image-container">
+      </div>
+      <div class="cta header-cta">
         <a href="" class="btn">Book a trip</a>
       </div>
   </header>
   <main>
-    <div class="hero">
+    <!-- <div class="hero">
       <video autoplay muted loop itemid="hero-video">
         <source src="assets/beach.mp4" type="video/mp4">
       </video>
       <div class="overlay"></div>
       <div class="hero-content">
         <h1>Visit Tahini</h1>
-      </div>
-      <div class="book">
+      </div> -->
+      <!-- <div class="book">
           <div class="btn book-btn">
             <i class="fa-regular fa-calendar"></i>
             Check in</div>
@@ -52,15 +58,22 @@
             Search
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="main-content">
 
       <div class="info-section experiences">
+        <div class="grid-2-column">
+          <div class="header-text">
             <h2>Experiences</h2>
             <p class="subtitle">Things to do around the island</p>
-            <div class="grid-3-column">
+          </div>
+          <div class="card-btn-container align-right align-right">
+            <a class="btn card-btn section-btn" href="">View all</a>
+          </div>
+        </div>
+        <div class="grid-3-column">
               <div class="card">
                 <div class="card-image-container">
                   <img src="assets/dolphinBoat.png" alt="">
@@ -70,7 +83,7 @@
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Suscipit similique cumque minima nesciunt quia</p>
                 </div>
-                <div class="card-btn-container">
+                <div class="card-btn-container align-right">
                   <a class="btn card-btn" href="">Learn More</a>
                 </div>
               </div>
@@ -83,7 +96,7 @@
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Suscipit similique cumque minima nesciunt quia</p>
                 </div>
-                <div class="card-btn-container">
+                <div class="card-btn-container align-right">
                   <a class="btn card-btn" href="">Learn More</a>
                 </div>
               </div>
@@ -96,15 +109,11 @@
                   <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Suscipit similique cumque minima nesciunt quia</p>
                 </div>
-                <div class="card-btn-container">
+                <div class="card-btn-container align-right align-right">
                   <a class="btn card-btn" href="">Learn More</a>
                 </div>
               </div>
-              <div class="card-btn-container align-right">
-                <a class="btn card-btn" href="">View all</a>
-              </div>
-            </div>
-
+        </div>
       </div>
 
       <div class="info-section accommodations">
@@ -113,8 +122,8 @@
             <h2>Accommodations</h2>
             <p class="subtitle">Places to stay around the island</p>
           </div>
-          <div class="card-btn-container align-right">
-            <a class="btn card-btn" href="">View all</a>
+          <div class="card-btn-container align-right align-right">
+            <a class="btn card-btn section-btn" href="">View all</a>
           </div>
         </div>
         <div class="grid-3-row">
@@ -127,7 +136,7 @@
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Suscipit similique cumque minima nesciunt quia</p>
             </div>
-            <div class="card-btn-container">
+            <div class="card-btn-container align-right">
               <a class="btn card-btn" href="">Learn More</a>
             </div>
           </div>
@@ -140,7 +149,7 @@
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Suscipit similique cumque minima nesciunt quia</p>
             </div>
-            <div class="card-btn-container">
+            <div class="card-btn-container align-right">
               <a class="btn card-btn" href="">Learn More</a>
             </div>
           </div>
@@ -153,7 +162,7 @@
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Suscipit similique cumque minima nesciunt quia</p>
             </div>
-            <div class="card-btn-container">
+            <div class="card-btn-container align-right">
               <a class="btn card-btn" href="">Learn More</a>
             </div>
           </div>
@@ -174,13 +183,13 @@
               <i class="fa-solid fa-user"></i>
               Guests</div>
             <div class="btn book-btn">
-              Search
               <i class="fa-solid fa-magnifying-glass"></i>
+              Search
             </div>
           </div>
         </div>
-        <div class="card-btn-container align-right">
-          <a class="btn card-btn booking-btn" href="">View all booking options</a>
+        <div class="card-btn-container align-right align-right">
+          <a class="btn card-btn booking-btn section-btn" href="">View all booking options</a>
         </div>
       </div>
     </div>
