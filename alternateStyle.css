@@ -11,6 +11,8 @@
   --h2: 1.875rem;
   --h3: 1.25rem;
 
+  --h1-mobile: 1.5rem;
+
   --padding-xxs: .15rem;
   --padding-xs: .25rem;
   --padding-sm: .5rem;
@@ -62,6 +64,10 @@
 
 
   --fontsize-bigger: 1.5rem;
+}
+
+.italics {
+  font-style: italic;
 }
 
 html {
@@ -143,15 +149,23 @@ nav {
 }
 
 .welcome-greeting {
-  display: none;
-}
-
-.menu-ul li {
-  list-style-type: none;
+  text-align: center;
+  background-color: var(--sky-transparent);
+  border-radius: var(--border-radius-base);
   margin: var(--margin-base);
+  padding: var(--padding-sm);
+  color: var(--sand);
 }
 
+.welcome-greeting h1 {
+  font-family: cursive;
+}
 
+.welcome-greeting h2 {
+  font-style: italic;
+  font-weight: lighter;
+  color: var(--icon-color);
+}
 
 .info-section {
   margin: var(--margin-base);
@@ -170,6 +184,18 @@ nav {
   padding: var(--padding-sm);
   margin: var(--margin-base) 0;
 }
+
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-base);
+}
+
+.search .btn {
+  padding: var(--padding-sm);
+}
+
 
 footer {
   background-color: var(--sand);
@@ -218,8 +244,23 @@ nav li:hover {
   color: var(--sand);
 }
 
-.book2 .btn:hover, .book-btn {
+.book2 .btn:hover, .book-btn:hover {
   background-color: var(--sky-transparent);
+}
+
+.booking-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-base);
+}
+
+.book2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .welcome-greeting {
@@ -231,7 +272,6 @@ nav li:hover {
   background-color: var(--sky-transparent);
   margin: var(--margin-base);
   color: var(--icon-color);
-
 }
 
 .welcome-greeting h1 {
@@ -313,14 +353,13 @@ footer .cta {
   margin-right: var(--margin-xl);
 }
 
-
+/*
 .book2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: fit-content;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.15);
-  gap: var(--gap-base);
   border-radius: var(--border-radius-base);
   padding: var(--padding-base);
   margin: var(--margin-base);
@@ -339,14 +378,32 @@ footer .cta {
   color: var(--ocean);
 }
 
+.search i {
+  padding: var(--padding-base);
+  background-color: var(--sky-transparent);
+  border-radius: var(--border-radius-base);
+}
+
 .book2 i {
   color: var(--icon-color);
 }
 
 .booking-btn {
+  display: flex;
   background-color: var(--sand);
   color: var(--icon-color);
 }
+ */
 
+/* .book2 .book-btn {
+  display: flex;
+} */
+
+/* .search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+} */
 
 }
