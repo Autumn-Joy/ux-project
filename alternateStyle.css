@@ -13,6 +13,8 @@
 
   --h1-mobile: 1.5rem;
 
+  --desktop-space-base: 2.5rem;
+
   --padding-xxs: .15rem;
   --padding-xs: .25rem;
   --padding-sm: .5rem;
@@ -114,6 +116,14 @@ button, .btn {
   border: var(--tan) solid 4px;
 }
 
+.mobile-header {
+  display: flex;
+}
+
+.desktop-header {
+  display: none;
+}
+
 header {
   color: var(--sand);
   font-size: var(--header-font-size);
@@ -143,18 +153,35 @@ nav {
   gap: var(--gap-base);
   text-align: center;
   color: var(--icon-color);
+  padding: var(--padding-sm);
+  border-radius: var(--border-radius-base);
+}
+
+.menu-ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-base);
+  text-align: center;
+  color: var(--icon-color);
   background-color: var(--sky-transparent);
   padding: var(--padding-sm);
   border-radius: var(--border-radius-base);
 }
 
+.menu-ul li {
+  list-style-type: none;
+}
+
 .welcome-greeting {
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  background-color: var(--sky-transparent);
   border-radius: var(--border-radius-base);
+  background-color: var(--sky-transparent);
   margin: var(--margin-base);
   padding: var(--padding-sm);
-  color: var(--sand);
+  color: var(--icon-color);
 }
 
 .welcome-greeting h1 {
@@ -168,8 +195,8 @@ nav {
 }
 
 .info-section {
-  margin: var(--margin-base);
-  padding: var(--padding-base);
+  margin: var(--desktop-space-base);
+  padding: var(--desktop-space-base);
   background-color: var(--sea-green);
   border-radius: var(--border-radius-base);
 }
@@ -185,7 +212,6 @@ nav {
   margin: var(--margin-base) 0;
 }
 
-
 .search {
   display: flex;
   align-items: center;
@@ -195,7 +221,6 @@ nav {
 .search .btn {
   padding: var(--padding-sm);
 }
-
 
 footer {
   background-color: var(--sand);
@@ -218,30 +243,82 @@ footer {
   padding: var(--padding-base);
 }
 
-/* tablet */
-/* @media (min-width: 768px) {
-
-} */
-
 /* desktop */
 @media (min-width: 1024px) {
 
-h2 {
-  font-size: var(--h2);
+.mobile-header {
+  display: none;
 }
 
-nav li:hover {
+.desktop-header {
+  display: flex;
+}
+
+header {
+  display: flex;
   color: var(--sand);
+  font-size: var(--header-font-size);
+  background-image: none;
+  background-repeat: no-repeat;
+}
+
+.hero {
+  width: 100%;
+  aspect-ratio: 25/10;
+  background-image: url(assets/beach1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-greeting {
+  padding: var(--padding-lg) var(--padding-xxxl);
+}
+
+.header-row1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: var(--margin-base);
+  max-width: var(--logo-max-width);
+}
+
+.menu-ul {
+  flex-direction: row;
+  padding: var(--padding-base);
+}
+
+.menu-ul li:hover {
+  color: var(--ocean);
+}
+
+h2 {
+  font-size: var(--h2);
 }
 
 .cta a {
   transition: .2s ease-in;
 }
 
-.cta a:hover, a:hover {
+.cta a:hover {
   background-color: var(--sea-green);
   border: solid 4px var(--icon-color);
   color: var(--sand);
+}
+
+.info-section {
+  margin: var(--margin-xl);
+  padding: var(--padding-base);
+  background-color: var(--sea-green);
+  border-radius: var(--border-radius-base);
 }
 
 .book2 .btn:hover, .book-btn:hover {
@@ -261,28 +338,6 @@ nav li:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.welcome-greeting {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: var(--padding-base) var(--padding-xxxl);
-  border-radius: var(--border-radius-base);
-  background-color: var(--sky-transparent);
-  margin: var(--margin-base);
-  color: var(--icon-color);
-}
-
-.welcome-greeting h1 {
-  size: var(--h1);
-  font-family: cursive;
-}
-
-.welcome-greeting h2 {
-  size: var(--h2);
-  font-style: italic;
-  font-weight: lighter;
 }
 
 .align-right {
