@@ -173,6 +173,11 @@ nav {
   list-style-type: none;
 }
 
+.current-nav {
+  font-weight: bold;
+  color: var(--ocean);
+}
+
 .welcome-greeting {
   flex-direction: column;
   align-items: center;
@@ -192,6 +197,10 @@ nav {
   font-style: italic;
   font-weight: lighter;
   color: var(--icon-color);
+}
+
+.no-background {
+  background: none;
 }
 
 .info-section {
@@ -222,6 +231,10 @@ nav {
   padding: var(--padding-sm);
 }
 
+input {
+  border: solid orange 2px;
+}
+
 footer {
   background-color: var(--sand);
   text-align: center;
@@ -242,6 +255,38 @@ footer {
 .cta {
   padding: var(--padding-base);
 }
+
+/***** experience page *******/
+
+.exp-section {
+  position: relative;
+  border: solid red 2px;
+
+}
+
+.exp-section > div {
+  border: orange 2px solid;
+}
+
+.section-image-container {
+  right: -50%;
+}
+
+.section-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.section-text-container {
+
+}
+
+.main-card {
+  margin: var(--margin-base);
+}
+
+
 
 /* desktop */
 @media (min-width: 1024px) {
@@ -273,6 +318,16 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.no-background {
+   width: 100%;
+  aspect-ratio: 25/10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
 }
 
 .welcome-greeting {
