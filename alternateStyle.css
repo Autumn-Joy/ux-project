@@ -33,10 +33,12 @@
 
   /* buttons */
   --btn-base: 1rem;
+  --border-radius-sm: .25rem;
   --border-radius-base: .5rem;
   --border-radius-lg: 1rem;
 
 
+  --gap-sm: .5rem;
   --gap-base: 1rem;
   --gap-lg: 1.5rem;
   --gap-xl: 2rem;
@@ -52,7 +54,7 @@
 
   font-size: 1rem;
 
-  /* color */
+  /* "brand" colors */
   --pink: #DFB4C2;
   --sand: #f6ece5;
   --sand-light: #f1f0ef;
@@ -94,7 +96,7 @@ button, .btn {
 
 .btn {
   background-color: var(--sky);
-  border: solid 4px var(--icon-color);
+  border: solid 2px var(--icon-color);
   color: var(--icon-color);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.15);
   border-radius: var(--border-radius-base);
@@ -107,13 +109,13 @@ button, .btn {
 
 .header-cta a {
   background-color: var(--sand);
-  border: var(--tan) solid 4px;
+  border: var(--tan) solid 2px;
 }
 
 .section-btn {
   text-align: center;
   background-color: var(--sand);
-  border: var(--tan) solid 4px;
+  border: var(--tan) solid 2px;
 }
 
 .mobile-header {
@@ -139,6 +141,10 @@ header {
 .header-image-container {
   padding: var(--padding-xxl) var(--padding-base);
 
+}
+
+.current-nav {
+  font-weight: bold;
 }
 
 .logo {
@@ -171,11 +177,6 @@ nav {
 
 .menu-ul li {
   list-style-type: none;
-}
-
-.current-nav {
-  font-weight: bold;
-  color: var(--ocean);
 }
 
 .welcome-greeting {
@@ -231,9 +232,86 @@ nav {
   padding: var(--padding-sm);
 }
 
-input {
-  border: solid orange 2px;
+/* ****** form style ******* */
+
+form {
+  border: solid green 2px;
+  padding: var(--padding-base);
+  margin: var(--margin-sm) 0;
+  border-radius: var(--border-radius-sm);
+  border: 2px solid var(--icon-color);
+  /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.15); */
 }
+
+input, select {
+  display: block;
+  width: 100%;
+  max-width: 75ch;
+  padding: var(--padding-sm);
+  margin: var(--margin-sm) 0;
+  border: 1px solid var(--sand);
+  border-radius: var(--border-radius-sm);
+  box-sizing: border-box;
+}
+
+.submit {
+  width: 100%;
+  padding: var(--padding-base);
+  margin: var(--margin-base) 0;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: var(--sea-green);
+}
+
+/* **** accordion style ****** */
+
+.accordion-container details {
+  border: 1px solid var(--sand);
+  border-radius: var(--border-radius-sm);
+  margin: var(--margin-base);
+  margin-top: 0;
+  background-color: var(--sand-light);
+}
+
+.accordion-container summary {
+  padding: var(--padding-lg);
+  background-color: var(--sand-light);
+  cursor: pointer;
+  font-weight: bold;
+  list-style: none;
+}
+
+/* Add custom arrow indicator using a pseudo-element */
+.accordion-container summary i{
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate the arrow when the details element is open */
+.accordion-container details:open i {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  padding: var(--padding-lg);
+  border-top: 2px solid var(--tan);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.accordion-container details:open .accordion-content {
+  max-height: 1000px;
+  transition: max-height 0.4s ease-in;
+}
+
+
+
+
 
 footer {
   background-color: var(--sand);
@@ -257,6 +335,24 @@ footer {
 }
 
 /***** experience page *******/
+.grid-section {
+  display: flex;
+  justify-content: center;
+}
+
+.grid3-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: var(--gap-base);
+  padding: var(--padding-base);
+  margin: var(--margin-base);
+}
+
+.item img {
+  aspect-ratio: 4/4;
+}
+
 
 .exp-section {
   position: relative;
@@ -265,7 +361,7 @@ footer {
 }
 
 .exp-section > div {
-  border: orange 2px solid;
+  /* border: orange 2px solid; */
 }
 
 .section-image-container {
@@ -357,6 +453,7 @@ header {
 
 h2 {
   font-size: var(--h2);
+  padding-bottom: var(--padding-base);
 }
 
 .cta a {
@@ -365,7 +462,7 @@ h2 {
 
 .cta a:hover {
   background-color: var(--sea-green);
-  border: solid 4px var(--icon-color);
+  border: solid 2px var(--icon-color);
   color: var(--sand);
 }
 
@@ -406,19 +503,47 @@ h2 {
 
 .grid-2-column {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.margin-column {
+  margin: var(--margin-xxl);
+  margin-bottom: var(--margin-base);
+}
+
+.image-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-container img{
+  width: 100%;      /* Make the image take the full width of the container */
+  height: 100%;     /* Make the image take the full height of the container */
+  object-fit: cover; /* Scale the image to cover the entire container while preserving aspect ratio and cropping overflow */
+  object-position: center;
+}
+
+.header-text {
+  padding: var(--padding-lg);
+}
+
+.subtitle {
+  font-style: italic;
+  padding-bottom: var(--padding-base);
 }
 
 .grid-3-column {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: var(--gap-xxl);
+  gap: var(--gap-base);
 }
 
 .grid-3-row {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: var(--gap-xxl);
+  gap: var(--gap-base);
 }
 
 .card-image-container {
@@ -462,6 +587,24 @@ footer .cta {
   justify-content: end;
   margin-right: var(--margin-xl);
 }
+
+/* *** experience section for desktop **** */
+
+.grid3-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: var(--gap-sm);
+  padding: var(--padding-base);
+  margin: var(--margin-xxl);
+}
+
+.item img {
+  aspect-ratio: 4/4;
+}
+
+
+
 
 /*
 .book2 {

@@ -11,7 +11,9 @@
   <header class="desktop-header">
       <div class="header-row1">
         <div class="logo">
-          <img src="assets/logo.svg" alt="">
+          <a href="index.html">
+             <img src="assets/logo.svg" alt="">
+          </a>
         </div>
         <nav>
           <ul class="menu-ul">
@@ -23,6 +25,9 @@
             </li>
             <li>
               <a href="bookings.html">Bookings</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
             </li>
           </ul>
         </nav>
@@ -39,7 +44,7 @@
   </header>
   <header class="mobile-header">
       <div class="logo">
-        <img src="assets/logo.svg" alt="">
+         <a href="index.html"><img src="assets/logo.svg" alt=""></a>
       </div>
       <div class="welcome-greeting">
         <h1>Visit Tanihi</h1>
@@ -56,6 +61,9 @@
           <li>
             <a href="bookings.html">Bookings</a>
           </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
         </ul>
       </nav>
       <div class="header-image-container">
@@ -65,31 +73,6 @@
       </div>
   </header>
   <main>
-    <!-- <div class="hero">
-      <video autoplay muted loop itemid="hero-video">
-        <source src="assets/beach.mp4" type="video/mp4">
-      </video>
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <h1>Visit Tahini</h1>
-      </div> -->
-      <!-- <div class="book">
-          <div class="btn book-btn">
-            <i class="fa-regular fa-calendar"></i>
-            Check in</div>
-          <div class="btn book-btn">
-            <i class="fa-regular fa-calendar"></i>
-            Check-out</div>
-          <div class="btn book-btn">
-            <i class="fa-solid fa-user"></i>
-            Guests</div>
-          <div class="btn book-btn">
-            Search
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-      </div> -->
-    </div>
-
     <div class="main-content">
 
       <div class="info-section experiences">
@@ -113,7 +96,7 @@
                     Suscipit similique cumque minima nesciunt quia</p>
                 </div>
                 <div class="card-btn-container align-right">
-                  <a class="btn card-btn" href="experience-detail1.html">Learn More</a>
+                  <a class="btn card-btn" href="experiences.html#experience1">Learn More</a>
                 </div>
               </div>
               <div class="card">
@@ -126,7 +109,7 @@
                     Suscipit similique cumque minima nesciunt quia</p>
                 </div>
                 <div class="card-btn-container align-right">
-                  <a class="btn card-btn" href="experience-detail2html">Learn More</a>
+                  <a class="btn card-btn" href="experiences.html#experience2">Learn More</a>
                 </div>
               </div>
               <div class="card">
@@ -139,7 +122,7 @@
                     Suscipit similique cumque minima nesciunt quia</p>
                 </div>
                 <div class="card-btn-container align-right align-right">
-                  <a class="btn card-btn" href="experience-detail3.html">Learn More</a>
+                  <a class="btn card-btn" href="experiences.html#experience3">Learn More</a>
                 </div>
               </div>
         </div>
@@ -152,7 +135,7 @@
             <p class="subtitle">Places to stay around the island</p>
           </div>
           <div class="card-btn-container align-right align-right">
-            <a class="btn card-btn section-btn" href="">View all</a>
+            <a class="btn card-btn section-btn" href="accommodations.html">View all</a>
           </div>
         </div>
         <div class="grid-3-row">
@@ -166,7 +149,7 @@
                 Suscipit similique cumque minima nesciunt quia</p>
             </div>
             <div class="card-btn-container align-right">
-              <a class="btn card-btn" href="accommodation-detail.html">Learn More</a>
+              <a class="btn card-btn" href="accommodations.html#accommodation1">Learn More</a>
             </div>
           </div>
           <div class="card">
@@ -179,7 +162,7 @@
                 Suscipit similique cumque minima nesciunt quia</p>
             </div>
             <div class="card-btn-container align-right">
-              <a class="btn card-btn" href="accommodation-detail2.html">Learn More</a>
+              <a class="btn card-btn" href="accommodations.html#accommodation2">Learn More</a>
             </div>
           </div>
           <div class="card">
@@ -192,15 +175,19 @@
                 Suscipit similique cumque minima nesciunt quia</p>
             </div>
             <div class="card-btn-container align-right">
-              <a class="btn card-btn" href="accommodation-detail3.html">Learn More</a>
+              <a class="btn card-btn" href="accommodations.html#accommodation3">Learn More</a>
             </div>
           </div>
         </div>
       </div>
+
       <div class="info-section booking-section">
-        <h2>Book with Us</h2>
-        <p class="subtitle">Start your adventure now</p>
-        <div class="book-section">
+        <h2>Start your adventure</h2>
+        <div class="card-btn-container">
+          <a class="btn card-btn booking-btn section-btn" href="bookings.html">Book a trip</a>
+        </div>
+
+        <!-- <div class="book-section">
           <div class="book2">
             <div class="btn book-btn search">
               <i class="fa-solid fa-magnifying-glass"></i>
@@ -219,15 +206,44 @@
               Guests
             </div>
           </div>
+        </div> -->
+      </div>
+
+    <!-- <div class="grid-section">
+      <div class="grid3-3">
+        <div class="item">
+          <img src="assets/surfBoards.png" alt="">
         </div>
-        <div class="card-btn-container align-right align-right">
-          <a class="btn card-btn booking-btn section-btn" href="">View all booking options</a>
+        <div class="item">
+          <img src="assets/surfBoards.png" alt="">
+        </div>
+        <div class="item">
+          <img src="assets/surfBoards.png" alt="">
+        </div>
+        <div class="item">
+          <img src="assets/surfBoards.png" alt="">
+        </div>
+        <div class="item">
+          <img src="assets/surfBoards.png" alt="">
+        </div>
+        <div class="item">
+          <img src="assets/surfBoards.png" alt="">
+        </div>
+        <div class="item">
+          <img src="assets/surfBoards.png" alt="">
+        </div>
+        <div class="item">
+          <img src="assets/surfBoards.png" alt="">
+        </div>
+        <div class="item">
+          <img src="assets/surfBoards.png" alt="">
         </div>
       </div>
-    </div>
+    </div> -->
+
     <footer>
       <div class="logo">
-        <img src="assets/logo.svg" alt="">
+         <a href="index.html"><img src="assets/logo.svg" alt=""></a>
       </div>
       <div class="footer-menu">
         <div class="footer-menu-column">
@@ -250,7 +266,7 @@
         </div>
       </div>
       <div class="cta">
-        <a href="" class="btn">Book a trip</a>
+        <a href="bookings.html" class="btn">Book a trip</a>
       </div>
     </footer>
   </main>
