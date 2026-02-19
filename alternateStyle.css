@@ -299,14 +299,13 @@ input, select {
 .accordion-content {
   padding: var(--padding-lg);
   border-top: 2px solid var(--tan);
-  max-height: 0;
-  overflow: hidden;
   transition: max-height 0.4s ease-out;
 }
 
 .accordion-container details:open .accordion-content {
   max-height: 1000px;
   transition: max-height 0.4s ease-in;
+  overflow: scroll;
 }
 
 
